@@ -17,3 +17,12 @@ function concommand.Run(Player,cmd,args,argumentString)
 	return oldConCommandRun(Player,cmd,args,argumentString)
 
 end
+
+local oldRunConsoleCommand = RunConsoleCommand
+
+function RunConsoleCommand(command,arguments)
+
+	print(command.." "..arguments)
+	return oldRunConsoleCommand(command,arguments)
+
+end
